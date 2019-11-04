@@ -1,0 +1,20 @@
+﻿<Window x:Class="yeopjipRandom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yeopjipRandom"
+        mc:Ignorable="d"
+        Title="{Binding Source={x:Static local:Constants.APP_TITLE}}" Height="{Binding Source={x:Static local:Constants.HEIGHT}}" Width="{Binding Source={x:Static local:Constants.WIDTH}}" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="707*"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="goToTeam" Content="팀 짜기" HorizontalAlignment="Left" Height="105" Margin="0,231,0,0" VerticalAlignment="Top" Width="142" Click="GoToTeam_Click"  Grid.Column="1"/>
+        <Button Name="setTeam" Content="인원 편집" HorizontalAlignment="Left" Height="105" Margin="479,231,0,0" VerticalAlignment="Top" Width="142" Click="SetTeam_Click" Grid.Column="1"/>
+        <Button Name="exit" Content="나가기" HorizontalAlignment="Left" Height="75" Margin="230,428,0,0" VerticalAlignment="Top" Width="142" Click="Exit_Click" Grid.Column="1"/>
+        <Label Content="랜덤 팀짜기" HorizontalAlignment="Left" Height="141" Margin="144,45,0,0" VerticalAlignment="Top" Width="351" FontSize="60" FontWeight="Bold" Grid.Column="1"/>
+
+    </Grid>
+</Window>

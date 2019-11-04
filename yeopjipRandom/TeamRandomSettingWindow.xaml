@@ -1,0 +1,37 @@
+﻿<Window x:Class="yeopjipRandom.TeamRandomSettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yeopjipRandom"
+        mc:Ignorable="d"
+        Title="{Binding Source={x:Static local:Constants.APP_TITLE}}" Height="{Binding Source={x:Static local:Constants.HEIGHT}}" Width="{Binding Source={x:Static local:Constants.WIDTH}}" ResizeMode="NoResize" Visibility="Visible">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="272*"/>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="283*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="memberListFromResource" HorizontalAlignment="Left" Height="430" Margin="194,48,0,0" VerticalAlignment="Top" Width="238" SelectionChanged="ListBox_SelectionChanged" FontSize="18" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Button Name="addBtn" Content="&lt;&lt;" HorizontalAlignment="Left" Height="45" Margin="92,76,0,0" VerticalAlignment="Top" Width="57" FontSize="18" Click="AddBtn_Click" Grid.Column="2" />
+        <ListBox x:Name="memberListForSadari" HorizontalAlignment="Left" Height="430" Margin="12,48,0,0" VerticalAlignment="Top" Width="238" SelectionChanged="ListBox_SelectionChanged" FontSize="18" Grid.ColumnSpan="3"/>
+        <Label Content="사다리 탈 멤버" HorizontalAlignment="Center" Height="43" Margin="55.79,0,213,0" VerticalAlignment="Top" Width="188" FontSize="20" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="안 탈 멤버" HorizontalAlignment="Center" Height="43" Margin="269,0,180,0" VerticalAlignment="Top" Width="188" FontSize="20" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Button x:Name="deleteBtn" Content="&gt;&gt;" HorizontalAlignment="Left" Height="45" Margin="92,175,0,0" VerticalAlignment="Top" Width="57" FontSize="18" Click="DeleteBtn_Click" Grid.Column="2" />
+        <TextBox Name="tmpMemberTxt" HorizontalAlignment="Left" Height="27" Margin="12,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button Name="tmpMemberAddBtn" Content="추가" HorizontalAlignment="Left" Height="27" Margin="177.79,525,0,0" VerticalAlignment="Top" Width="50" FontSize="18" Click="TmpMemberAddBtn_Click" RenderTransformOrigin="0.411,1.385" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="임시멤버 추가" HorizontalAlignment="Left" Height="32" Margin="12,488,0,0" VerticalAlignment="Top" Width="201" FontSize="18" Grid.ColumnSpan="3"/>
+        <TextBox Name="eachTeamMemberNumLabel" HorizontalAlignment="Left" Height="41" Margin="148,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18" PreviewTextInput="MemberNum_PreviewTextInput" TextChanged="MemberNum_TextChanged" Grid.Column="4"/>
+        <Label Content="명" HorizontalAlignment="Left" Height="41" Margin="219,113,0,0" VerticalAlignment="Top" Width="37" FontSize="24" Grid.Column="4"/>
+        <Label Content="팀 인원" HorizontalAlignment="Left" Height="43" Margin="133,65,0,0" VerticalAlignment="Top" Width="108" FontSize="24" Grid.Column="4"/>
+        <Label Name="teamNumLabel" Content="0" HorizontalAlignment="Left" Height="45" Margin="148,192,0,0" VerticalAlignment="Top" Width="40" FontSize="24" Grid.Column="4"/>
+        <Label Content="팀" HorizontalAlignment="Left" Height="45" Margin="193,192,0,0" VerticalAlignment="Top" Width="48" FontSize="24" Grid.Column="4"/>
+        <Label Content="총" HorizontalAlignment="Left" Height="39" Margin="133,242,0,0" VerticalAlignment="Top" Width="37" FontSize="24" RenderTransformOrigin="0.496,-0.855" Grid.Column="4"/>
+        <Label Content="명" HorizontalAlignment="Left" Height="41" Margin="204,242,0,0" VerticalAlignment="Top" Width="37" FontSize="24" Grid.Column="4"/>
+        <Label x:Name="memberNumLabel" Content="0" HorizontalAlignment="Left" Height="45" Margin="175,242,0,0" VerticalAlignment="Top" Width="40" FontSize="24" Grid.Column="4"/>
+        <Button Name="gotoResultWindowBtn" Content="돌리기" HorizontalAlignment="Left" Height="101" Margin="148,419,0,0" VerticalAlignment="Top" Width="93" FontSize="30" Click="GotoResultWindowBtn_Click" Grid.Column="4"/>
+        <Button x:Name="gotoBack" Content="뒤로 가기" HorizontalAlignment="Left" Height="54" Margin="133,6,0,0" VerticalAlignment="Top" Width="108" FontSize="24" Click="GotoBack_Click" Grid.Column="4"/>
+    </Grid>
+</Window>
